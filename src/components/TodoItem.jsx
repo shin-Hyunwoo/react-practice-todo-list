@@ -1,5 +1,5 @@
-const TodoItem = ({ id, content }) => {
-  return <li key={id}>{content}</li>;
+const TodoItem = ({ content }) => {
+  return <li>{content}</li>;
 };
 
 export default TodoItem;
