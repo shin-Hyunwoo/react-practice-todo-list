@@ -1,5 +1,5 @@
-const TodoItem = () => {
-  return <li>투두 내용</li>;
+const TodoItem = ({ id, content }) => {
+  return <li key={id}>{content}</li>;
 };
 
 export default TodoItem;
