@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import TodoList from './components/TodoList';
 
 const tempData = [
@@ -7,10 +8,12 @@ const tempData = [
 ];
 
 function App() {
+  const [todos, setTodos] = useState(tempData);
+
   return (
     <>
       <h1>리액트로 만드는 투두리스트</h1>
-      <TodoList />
+      <TodoList todos={todos} />
     </>
   );
 }
