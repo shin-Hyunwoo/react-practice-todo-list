@@ -9,12 +9,20 @@ function App() {
     setTodo(event.target.value);
   };
 
+  const addNewTodo = () => {
+    const newTodo = { id: Math.random(), content: todo };
+
+    setTodos((prev) => {
+      return [...prev, newTodo];
+    });
+  };
+
   return (
     <>
       <h1>리액트로 만드는 투두리스트</h1>
       <div>
         <input value={todo} onChange={onChangeInput} />
-        <button>추가</button>
+        <button onClick={addNewTodo}>추가</button>
       </div>
       <TodoList todos={todos} />
     </>
