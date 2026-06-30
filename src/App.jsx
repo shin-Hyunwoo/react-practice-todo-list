@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import TodoList from './components/TodoList';
 
 function App() {
-  const inputRef = useRef();
+  const inputRef = useRef(null);
 
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState('');
