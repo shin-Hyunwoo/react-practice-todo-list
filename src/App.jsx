@@ -10,7 +10,7 @@ function App() {
   };
 
   const addNewTodo = () => {
-    const newTodo = { id: Math.random(), content: todo };
+    const newTodo = { id: crypto.randomUUID(), content: todo };
 
     setTodos((prev) => {
       return [...prev, newTodo];
