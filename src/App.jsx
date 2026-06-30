@@ -15,6 +15,7 @@ function App() {
     setTodos((prev) => {
       return [...prev, newTodo];
     });
+    setTodo('');
   };
 
   return (
