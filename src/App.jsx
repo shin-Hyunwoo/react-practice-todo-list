@@ -26,6 +26,14 @@ function App() {
     setTodo('');
   };
 
+  const deleteTodo = (id) => {
+    const filterdTodo = todos.filter((todo) => {
+      return todo.id !== id;
+    });
+
+    setTodos(filterdTodo);
+  };
+
   return (
     <>
       <h1>리액트로 만드는 투두리스트</h1>
@@ -33,7 +41,7 @@ function App() {
         <input value={todo} onChange={onChangeInput} ref={inputRef} />
         <button onClick={addNewTodo}>추가</button>
       </div>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} />
     </>
   );
 }
