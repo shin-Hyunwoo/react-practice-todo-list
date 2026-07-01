@@ -1,6 +1,6 @@
 import TodoItem from './TodoItem';
 
-const TodoList = ({ todos, deleteTodo }) => {
+const TodoList = ({ todos, deleteTodo, changeTodo }) => {
   return (
     <ul>
       {todos.map((todo) => {
@@ -10,6 +10,7 @@ const TodoList = ({ todos, deleteTodo }) => {
             id={todo.id}
             content={todo.content}
             deleteTodo={deleteTodo}
+            changeTodo={changeTodo}
           />
         );
       })}

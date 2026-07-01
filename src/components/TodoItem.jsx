@@ -1,8 +1,8 @@
-const TodoItem = ({ id, content, deleteTodo }) => {
+const TodoItem = ({ id, content, deleteTodo, changeTodo }) => {
   return (
     <li>
       <span>{content}</span>
-      <button>수정</button>
+      <button onClick={() => changeTodo(id)}>수정</button>
       <button onClick={() => deleteTodo(id)}>삭제</button>
     </li>
   );
