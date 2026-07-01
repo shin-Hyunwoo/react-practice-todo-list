@@ -12,6 +12,11 @@ function App() {
   };
 
   const addNewTodo = () => {
+    if (!todo) {
+      alert('할 일을 입력해주세요.');
+      return;
+    }
+
     const newTodo = { id: crypto.randomUUID(), content: todo };
 
     setTodos((prev) => {
